@@ -1,0 +1,13 @@
+Package: AmbientDataSheet
+Title: R script to create a data sheet from different types of input data (Somnofy, Axivity, EMA).
+Version: 0.0.1
+Authors@R: 
+    person("Daniel", "Thedie", , "daniel.thedie@ed.ac.uk", role = c("aut", "cre"))
+Description: The script imports and cleans up sleep data from different sources, and uses it to compile a data sheet.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
