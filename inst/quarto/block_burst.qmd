@@ -1,0 +1,11 @@
+::: {.raw-latex}
+\vspace{-1.3em}
+:::
+```{r}
+#| layout: [[30, 10, -5, 30, -15, 55]]
+#| warning: false
+AmbientDataSheet::plot_somnofy_sessions(somnofy)
+knitr::include_graphics("../img/bracket.png")
+AmbientDataSheet::plot_ema_meters(ema)
+AmbientDataSheet::plot_method_comparison(somnofy, ema, axivity)
+```
