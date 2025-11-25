@@ -58,7 +58,10 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
                   color = "Timing",
                   shape = "Method"
                   ) +
-    ggplot2::theme_minimal()
+    ggplot2::theme_minimal() +
+    ggplot2::theme(
+      axis.text = ggplot2::element_text(size = 14, color = "black")
+    )
 
 }
 
