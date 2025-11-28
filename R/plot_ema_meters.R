@@ -1,7 +1,7 @@
 #' @export
 plot_ema_meters <- function(ema) {
   col <- nocturn::get_colnames(ema)
-  
+
   plot_data <- ema |>
     dplyr::mutate(
       Anxiety = .data[[col$anxiety_level]] *2,
@@ -16,9 +16,9 @@ plot_ema_meters <- function(ema) {
     dplyr::summarise(
       mean_value = mean(.data$value, na.rm = TRUE)
     ) |>
-      dplyr::mutate(
-        ymin = 0,
-        ymax = 10
+    dplyr::mutate(
+      ymin = 0,
+      ymax = 10
     )
 
   ggplot2::ggplot(plot_data, ggplot2::aes(x = type, y = mean_value, fill = mean_value)) +
@@ -45,5 +45,5 @@ plot_ema_meters <- function(ema) {
       panel.grid = ggplot2::element_blank(),
       axis.text.x = ggplot2::element_text(size = 25, color = "black"),
       axis.text.y = ggplot2::element_blank()
-      )
+    )
 }

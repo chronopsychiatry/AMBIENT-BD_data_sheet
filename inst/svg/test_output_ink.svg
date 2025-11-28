@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297" version="1.1" id="svg5" sodipodi:docname="test_template_ink.svg" inkscape:version="1.2.2 (b0a8486541, 2022-12-01)">
+  <sodipodi:namedview id="namedview15" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" showgrid="false" inkscape:zoom="0.72248176" inkscape:cx="397.24186" inkscape:cy="569.56455" inkscape:window-width="1920" inkscape:window-height="1043" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg5"/>
+  <defs id="defs2"/>
+  <text xml:space="preserve" style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999" x="41.446709" y="18.116173" id="text186">
+    <tspan id="tspan184" style="font-weight:bold;font-size:10.5833px;fill:#000000;stroke:none;stroke-width:0.5" x="41.446709" y="18.116173">Ambient-BD Data Sheet</tspan>
+  </text>
+  <path style="fill:none;stroke:#000000;stroke-width:0.499999" d="M 6.2190285,27.038292 H 200.7026" id="path450"/>
+  <path style="fill:none;stroke:#000000;stroke-width:0.499999" d="M 6.2190302,56.761889 H 200.7026" id="path450-3"/>
+  <text xml:space="preserve" style="font-size:6.35px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999" x="9.2125273" y="36.38834" id="text495">
+    <tspan id="tspan493" style="font-size:6.35px;fill:#000000;stroke:none;stroke-width:0.5" x="9.2125273" y="36.38834">Date range: 01/09/2025 to 01/12/2026</tspan>
+    <tspan style="font-size:6.35px;fill:#000000;stroke:none;stroke-width:0.5" x="9.2125273" y="44.32584" id="tspan497">Participant ID: ABD001</tspan>
+  </text>
+  <rect style="fill:none;stroke:#000000;stroke-width:0.499999" id="Sessions" width="55.084511" height="225.38954" x="5.982564" y="63.447983"/>
+  <rect style="fill:none;stroke:#000000;stroke-width:0.499999" id="Comparison" width="134.93874" height="84.270203" x="67.017128" y="155.35158"/>
+  <g ns="http://www.w3.org/2000/svg" transform="translate(67.017128,64.370201) scale(0.352772,0.352781)" id="Bubbles">
+    <g xmlns="http://www.w3.org/2000/svg" class="svglite">
+      <defs>
+        <style type="text/css"><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+      </defs>
+      <defs>
+        <clipPath id="cpMC4wMHwzODIuNTB8MC4wMHwyMzguODg=">
+          <rect x="0.00" y="0.00" width="382.50" height="238.88"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#cpMC4wMHwzODIuNTB8MC4wMHwyMzguODg=)">
+        <rect x="0.00" y="0.00" width="382.50" height="238.88" style="stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;"/>
+      </g>
+      <defs>
+        <clipPath id="cpNDAuNDZ8Mzc3LjAyfDIzLjE4fDIwNy4zOA==">
+          <rect x="40.46" y="23.18" width="336.57" height="184.20"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#cpNDAuNDZ8Mzc3LjAyfDIzLjE4fDIwNy4zOA==)">
+        <rect x="40.46" y="23.18" width="336.57" height="184.20" style="stroke-width: 1.07; stroke: none; fill: #EBEBEB;"/>
+        <polyline points="40.46,175.99 377.02,175.99 " style="stroke-width: 0.53; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="40.46,129.95 377.02,129.95 " style="stroke-width: 0.53; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="40.46,83.91 377.02,83.91 " style="stroke-width: 0.53; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="40.46,37.87 377.02,37.87 " style="stroke-width: 0.53; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="106.75,207.38 106.75,23.18 " style="stroke-width: 0.53; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="208.74,207.38 208.74,23.18 " style="stroke-width: 0.53; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="310.73,207.38 310.73,23.18 " style="stroke-width: 0.53; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="40.46,199.01 377.02,199.01 " style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="40.46,152.97 377.02,152.97 " style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="40.46,106.93 377.02,106.93 " style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="40.46,60.89 377.02,60.89 " style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="55.75,207.38 55.75,23.18 " style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="157.74,207.38 157.74,23.18 " style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="259.73,207.38 259.73,23.18 " style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="361.73,207.38 361.73,23.18 " style="stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: butt;"/>
+        <polyline points="55.75,199.01 157.74,44.04 259.73,31.55 361.73,173.02 " style="stroke-width: 1.07; stroke-linecap: butt;"/>
+      </g>
+      <g clip-path="url(#cpMC4wMHwzODIuNTB8MC4wMHwyMzguODg=)">
+        <text x="35.52" y="202.16" text-anchor="end" style="font-size: 8.80px;fill: #4D4D4D; font-family: &quot;Arial&quot;;" textLength="17.11px" lengthAdjust="spacingAndGlyphs">0.00</text>
+        <text x="35.52" y="156.12" text-anchor="end" style="font-size: 8.80px;fill: #4D4D4D; font-family: &quot;Arial&quot;;" textLength="17.11px" lengthAdjust="spacingAndGlyphs">0.25</text>
+        <text x="35.52" y="110.08" text-anchor="end" style="font-size: 8.80px;fill: #4D4D4D; font-family: &quot;Arial&quot;;" textLength="17.11px" lengthAdjust="spacingAndGlyphs">0.50</text>
+        <text x="35.52" y="64.04" text-anchor="end" style="font-size: 8.80px;fill: #4D4D4D; font-family: &quot;Arial&quot;;" textLength="17.11px" lengthAdjust="spacingAndGlyphs">0.75</text>
+        <polyline points="37.72,199.01 40.46,199.01 " style="stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;"/>
+        <polyline points="37.72,152.97 40.46,152.97 " style="stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;"/>
+        <polyline points="37.72,106.93 40.46,106.93 " style="stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;"/>
+        <polyline points="37.72,60.89 40.46,60.89 " style="stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;"/>
+        <polyline points="55.75,210.12 55.75,207.38 " style="stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;"/>
+        <polyline points="157.74,210.12 157.74,207.38 " style="stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;"/>
+        <polyline points="259.73,210.12 259.73,207.38 " style="stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;"/>
+        <polyline points="361.73,210.12 361.73,207.38 " style="stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;"/>
+        <text x="55.75" y="218.61" text-anchor="middle" style="font-size: 8.80px;fill: #4D4D4D; font-family: &quot;Arial&quot;;" textLength="4.89px" lengthAdjust="spacingAndGlyphs">0</text>
+        <text x="157.74" y="218.61" text-anchor="middle" style="font-size: 8.80px;fill: #4D4D4D; font-family: &quot;Arial&quot;;" textLength="4.89px" lengthAdjust="spacingAndGlyphs">1</text>
+        <text x="259.73" y="218.61" text-anchor="middle" style="font-size: 8.80px;fill: #4D4D4D; font-family: &quot;Arial&quot;;" textLength="4.89px" lengthAdjust="spacingAndGlyphs">2</text>
+        <text x="361.73" y="218.61" text-anchor="middle" style="font-size: 8.80px;fill: #4D4D4D; font-family: &quot;Arial&quot;;" textLength="4.89px" lengthAdjust="spacingAndGlyphs">3</text>
+        <text x="208.74" y="231.08" text-anchor="middle" style="font-size: 11.00px; font-family: &quot;Arial&quot;;" textLength="5.50px" lengthAdjust="spacingAndGlyphs">x</text>
+        <text transform="translate(13.36,115.28) rotate(-90)" text-anchor="middle" style="font-size: 11.00px; font-family: &quot;Arial&quot;;" textLength="26.88px" lengthAdjust="spacingAndGlyphs">sin(x)</text>
+        <text x="40.46" y="14.93" style="font-size: 13.20px; font-family: &quot;Arial&quot;;" textLength="110.64px" lengthAdjust="spacingAndGlyphs">Embedded ggplot2</text>
+      </g>
+    </g>
+  </g>
+</svg>

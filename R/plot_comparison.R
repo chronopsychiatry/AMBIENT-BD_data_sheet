@@ -34,12 +34,14 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
     dplyr::ungroup()
 
   ggplot2::ggplot(plot_data,
-                  ggplot2::aes(
-                    x = night,
-                    y = time,
-                    color = measure,
-                    shape = method,
-                    group = interaction(method, measure))) +
+    ggplot2::aes(
+      x = night,
+      y = time,
+      color = measure,
+      shape = method,
+      group = interaction(method, measure)
+    )
+  ) +
     ggplot2::geom_line() +
     ggplot2::geom_point(size = 3, alpha = 0.7) +
     ggplot2::scale_y_continuous(
@@ -53,11 +55,12 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
     ggplot2::scale_color_manual(
       values = c("Sleep Onset" = "purple", "Midsleep" = "cornflowerblue", "Wakeup" = "orange")
     ) +
-    ggplot2::labs(x = NULL,
-                  y = NULL,
-                  color = "Timing",
-                  shape = "Method"
-                  ) +
+    ggplot2::labs(
+      x = NULL,
+      y = NULL,
+      color = "Timing",
+      shape = "Method"
+    ) +
     ggplot2::theme_minimal() +
     ggplot2::theme(
       axis.text = ggplot2::element_text(size = 14, color = "black")
