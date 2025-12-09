@@ -51,7 +51,8 @@ plot_somnofy_sessions <- function(sessions) {
         "sleep_end" = "orange"
       )
     ) +
-    ggplot2::scale_y_reverse() +
+    ggplot2::scale_x_continuous(expand = ggplot2::expansion(mult = 0.02)) +
+    ggplot2::scale_y_reverse(expand = ggplot2::expansion(mult = 0.0025)) +
     ggplot2::labs(
       title = NULL,
       x = NULL,
@@ -62,6 +63,7 @@ plot_somnofy_sessions <- function(sessions) {
     ggplot2::theme(
       axis.text.x = ggplot2::element_blank(),
       axis.text.y = ggplot2::element_blank(),
-      panel.grid = ggplot2::element_blank()
+      panel.grid = ggplot2::element_blank(),
+      plot.margin = grid::unit(c(0, 0, 0, 0), "pt")
     )
 }

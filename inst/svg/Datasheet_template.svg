@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="Datasheet_template.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4449635"
+     inkscape:cx="250.52536"
+     inkscape:cy="226.64932"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs2" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:0.415366"
+     id="Sessions"
+     width="34.841347"
+     height="245.91853"
+     x="0.92806858"
+     y="47.318657"
+     inkscape:label="Sessions" />
+  <text
+     xml:space="preserve"
+     style="font-size:10.5833px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999"
+     x="46.915096"
+     y="15.470339"
+     id="text186"><tspan
+       id="tspan184"
+       style="font-weight:normal;font-size:10.5833px;fill:#000000;stroke:none;stroke-width:0.5"
+       x="46.915096"
+       y="15.470339">Ambient-BD Data Sheet</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.499999"
+     d="M 6.2190285,21.746622 H 200.7026"
+     id="path450" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.499999"
+     d="M 6.2190302,36.124376 H 200.7026"
+     id="path450-3" />
+  <text
+     xml:space="preserve"
+     style="font-size:4.23333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999"
+     x="7.7419472"
+     y="32.89933"
+     id="text495"
+     inkscape:label="dates"><tspan
+       sodipodi:role="line"
+       id="tspan442"
+       x="7.7419472"
+       y="32.89933"
+       style="font-size:4.23333px;fill:#000000;stroke:none"><tspan
+         id="tspan493"
+         style="font-size:4.23333px;fill:#000000;stroke:none;stroke-width:0.5"
+         x="7.7419472"
+         y="32.89933">Date range: {} to {}</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:4.23333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999"
+     x="146.10056"
+     y="26.304203"
+     id="text495-2"
+     inkscape:label="EMA_bursts"><tspan
+       sodipodi:role="line"
+       x="146.10056"
+       y="26.304203"
+       style="font-size:4.23333px;fill:#000000;stroke:none"
+       id="tspan7776">Number of EMA bursts: {}</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:4.23333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999"
+     x="65.810417"
+     y="26.304203"
+     id="text495-2-0"
+     inkscape:label="Som_sessions"><tspan
+       sodipodi:role="line"
+       x="65.810417"
+       y="26.304203"
+       style="font-size:4.23333px;fill:#000000;stroke:none"
+       id="tspan7776-9">Number of Somnofy sessions: {}</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:4.23333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999"
+     x="146.10056"
+     y="32.89933"
+     id="text495-2-2"
+     inkscape:label="Axivity_bursts"><tspan
+       sodipodi:role="line"
+       x="146.10056"
+       y="32.89933"
+       style="font-size:4.23333px;fill:#000000;stroke:none"
+       id="tspan7776-7">Number of Axivity bursts: {}</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.64444px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999"
+     x="92.54538"
+     y="43.681988"
+     id="text495-3"
+     inkscape:label="Som1234"><tspan
+       sodipodi:role="line"
+       id="tspan442-6"
+       x="92.54538"
+       y="43.681988"
+       style="font-weight:bold;font-size:5.64444px;fill:#000000;stroke:none">Somnofy</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.64444px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999"
+     x="41.020184"
+     y="164.25479"
+     id="text495-3-5"
+     inkscape:label="EMA1234"><tspan
+       sodipodi:role="line"
+       id="tspan442-6-3"
+       x="41.020184"
+       y="164.25479"
+       style="font-weight:bold;font-size:5.64444px;fill:#000000;stroke:none">EMA</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:5.64444px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:none;stroke:#000000;stroke-width:0.499999"
+     x="40.883244"
+     y="217.53165"
+     id="text495-3-5-5"
+     inkscape:label="Comp1234"><tspan
+       sodipodi:role="line"
+       id="tspan442-6-3-6"
+       x="40.883244"
+       y="217.53165"
+       style="font-weight:bold;font-size:5.64444px;fill:#000000;stroke:none">Sleep timing comparison</tspan><tspan
+       sodipodi:role="line"
+       x="40.883244"
+       y="224.5872"
+       style="font-weight:normal;font-size:4.93889px;fill:#000000;stroke:none"
+       id="tspan7711">(Somnofy, EMA, Axivity)</tspan></text>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:0.320607"
+     id="Comparison"
+     width="88.937912"
+     height="52.569088"
+     x="79.77269"
+     y="102.25222"
+     inkscape:label="Density" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:0.402173"
+     id="Comparison-367"
+     width="168.10196"
+     height="43.764587"
+     x="39.746151"
+     y="164.73128"
+     inkscape:label="Mood_board" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:0.496903"
+     id="Comparison-36"
+     width="169.78894"
+     height="66.146721"
+     x="39.803722"
+     y="227.0497"
+     inkscape:label="Comparison" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:0.444564"
+     id="Comparison-3"
+     width="166.40205"
+     height="54.023712"
+     x="40.676296"
+     y="47.583084"
+     inkscape:label="Bubbles" />
+  <text
+     xml:space="preserve"
+     style="font-size:4.23333px;line-height:1.5;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';text-align:start;text-anchor:start;fill:none;fill-opacity:0.999976;stroke:#000000;stroke-width:0.499999"
+     x="7.7419472"
+     y="26.304203"
+     id="text7099"
+     inkscape:label="participant_id"><tspan
+       sodipodi:role="line"
+       id="tspan7097"
+       style="text-align:start;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.5"
+       x="7.7419472"
+       y="26.304203">Participant ID: {}</tspan></text>
+  <path
+     style="fill:none;fill-opacity:0.999976;stroke-width:0.3;stroke:#000000;stroke-dasharray:none"
+     d="M 41.147637,156.9215 H 205.59228"
+     id="path7586" />
+  <path
+     style="fill:none;fill-opacity:0.999976;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+     d="M 41.147632,210.02084 H 205.59228"
+     id="path7586-3" />
+</svg>

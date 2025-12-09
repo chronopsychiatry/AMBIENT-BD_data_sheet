@@ -1,21 +1,19 @@
-load_data <- function() {
-  somnofy_file <- "/media/Store/Daniel/Ambient-BD/Data/AmbientViewer_test_data/simulated_sessions_18months.csv"
+load_data <- function(date_range = c(NULL, NULL)) {
+  data_folder <- "/media/Store/Daniel/Ambient-BD/Data/Data_sheet_test_input/18-months_test/"
+
+  somnofy_file <- paste0(data_folder, "simulated_sessions_18months.csv")
   somnofy <- nocturn::load_sessions(somnofy_file) |>
-    AmbientDataSheet::clean_data()
+    clean_data(date_range = date_range)
 
-  ema_file <- "/media/Store/Daniel/Ambient-BD/Data/Data_sheet_test_input/WP4_test/ABD001_PROM-EMA_module_bfef9dv80oupx78m_20251112.csv"
-
-  ema <- nocturn::load_sessions(ema_file) |>
-    nocturn::set_colnames(AmbientDataSheet::ema_colnames)
+  ema <- nocturn::load_batch(data_folder, pattern = "PROM-EMA") |>
+    nocturn::set_colnames(ema_colnames)
   ema_col <- nocturn::get_colnames(ema)
   ema[[ema_col$sleep_onset_latency]] <- ema[[ema_col$sleep_onset_latency]] * 60 # minutes to seconds
   ema <- nocturn::clean_sessions(ema) |>
-    AmbientDataSheet::clean_data()
+    clean_data(date_range = date_range)
 
-  axivity_file <- "/media/Store/Daniel/Ambient-BD/Data/Data_sheet_test_input/WP4_test/Fake_GGIR_part4.csv"
-
-  axivity <- nocturn::load_sessions(axivity_file) |>
-    AmbientDataSheet::clean_data()
+  axivity <- nocturn::load_batch(data_folder, pattern = "GGIR_part4") |>
+    clean_data(date_range = date_range)
 
   list(somnofy = somnofy,
        ema = ema,
