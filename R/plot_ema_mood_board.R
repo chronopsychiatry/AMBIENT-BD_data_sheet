@@ -6,7 +6,7 @@ plot_ema_mood_board <- function(ema) {
       burst = as.factor(dplyr::dense_rank(.data$filename))
     ) |>
     dplyr::arrange(.data$burst, .data[[col$night]]) |>
-    dplyr::group_by(burst) |>
+    dplyr::group_by(.data$burst) |>
     dplyr::mutate(
       burst_label = paste0(
         format(min(.data[[col$night]], na.rm = TRUE), "%d-%m-%Y"),
@@ -20,11 +20,11 @@ plot_ema_mood_board <- function(ema) {
   plot_data <- plot_data |>
     dplyr::mutate(
       burst_label = factor(
-        burst_label,
+        .data$burst_label,
         levels = plot_data |>
-          dplyr::distinct(burst_label, burst_min_night) |>
-          dplyr::arrange(burst_min_night) |>
-          dplyr::pull(burst_label)
+          dplyr::distinct(.data$burst_label, .data$burst_min_night) |>
+          dplyr::arrange(.data$burst_min_night) |>
+          dplyr::pull(.data$burst_label)
       )
     )
 

@@ -21,13 +21,13 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
   ) |>
     purrr::reduce(~dplyr::full_join(.x, .y, by = "night")) |>
     dplyr::mutate(
-      sleep_onset_ema = shortest_time_diff(time_at_sleep_onset_somnofy, time_at_sleep_onset_ema),
-      midsleep_ema    = shortest_time_diff(time_at_midsleep_somnofy,    time_at_midsleep_ema),
-      wakeup_ema      = shortest_time_diff(time_at_wakeup_somnofy,      time_at_wakeup_ema),
-      sleep_onset_axv = shortest_time_diff(time_at_sleep_onset_somnofy, time_at_sleep_onset_axivity),
-      midsleep_axv    = shortest_time_diff(time_at_midsleep_somnofy,    time_at_midsleep_axivity),
-      wakeup_axv      = shortest_time_diff(time_at_wakeup_somnofy,      time_at_wakeup_axivity),
-      burst           = dplyr::coalesce(filename_ema, filename_axivity)
+      sleep_onset_ema = shortest_time_diff(.data$time_at_sleep_onset_somnofy, .data$time_at_sleep_onset_ema),
+      midsleep_ema    = shortest_time_diff(.data$time_at_midsleep_somnofy,    .data$time_at_midsleep_ema),
+      wakeup_ema      = shortest_time_diff(.data$time_at_wakeup_somnofy,      .data$time_at_wakeup_ema),
+      sleep_onset_axv = shortest_time_diff(.data$time_at_sleep_onset_somnofy, .data$time_at_sleep_onset_axivity),
+      midsleep_axv    = shortest_time_diff(.data$time_at_midsleep_somnofy,    .data$time_at_midsleep_axivity),
+      wakeup_axv      = shortest_time_diff(.data$time_at_wakeup_somnofy,      .data$time_at_wakeup_axivity),
+      burst           = dplyr::coalesce(.data$filename_ema, .data$filename_axivity)
     ) |>
     tidyr::pivot_longer(
       cols = dplyr::matches("^(sleep_onset|midsleep|wakeup)_(ema|axv)$"),
@@ -39,46 +39,46 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
         grepl("_ema$", measure) ~ "EMA",
         grepl("_axv$", measure) ~ "Axivity"
       ),
-      measure = sub("_(ema|axv)$", "", measure)
+      measure = sub("_(ema|axv)$", "", .data$measure)
     ) |>
-    dplyr::filter(!is.na(method) & !is.na(burst)) |>
+    dplyr::filter(!is.na(.data$method) & !is.na(.data$burst)) |>
     dplyr::mutate(
-      measure = factor(measure, levels = c("sleep_onset", "midsleep", "wakeup"), labels = c("Sleep Onset", "Midsleep", "Wakeup"))
+      measure = factor(.data$measure, levels = c("sleep_onset", "midsleep", "wakeup"), labels = c("Sleep Onset", "Midsleep", "Wakeup"))
     ) |>
-    dplyr::group_by(burst) |>
+    dplyr::group_by(.data$burst) |>
     dplyr::mutate(
       burst_label = paste0(
-        format(min(night, na.rm = TRUE), "%d-%m-%Y"),
+        format(min(.data$night, na.rm = TRUE), "%d-%m-%Y"),
         " to\n",
-        format(max(night, na.rm = TRUE), "%d-%m-%Y")
+        format(max(.data$night, na.rm = TRUE), "%d-%m-%Y")
       ),
-      burst_min_night = min(night, na.rm = TRUE)
+      burst_min_night = min(.data$night, na.rm = TRUE)
     ) |>
     dplyr::ungroup()
 
   plot_data <- plot_data |>
     dplyr::mutate(
       burst_label = factor(
-        burst_label,
+        .data$burst_label,
         levels = plot_data |>
-          dplyr::distinct(burst_label, burst_min_night) |>
-          dplyr::arrange(burst_min_night) |>
-          dplyr::pull(burst_label)
+          dplyr::distinct(.data$burst_label, .data$burst_min_night) |>
+          dplyr::arrange(.data$burst_min_night) |>
+          dplyr::pull(.data$burst_label)
       )
     )
 
 
   ggplot2::ggplot(plot_data,
     ggplot2::aes(
-      x = night,
-      y = time,
-      fill = time,
-      shape = method
+      x = .data$night,
+      y = .data$time,
+      fill = .data$time,
+      shape = .data$method
     )
   ) +
     ggplot2::facet_grid(
-      rows = ggplot2::vars(measure),
-      cols = ggplot2::vars(burst_label),
+      rows = ggplot2::vars(.data$measure),
+      cols = ggplot2::vars(.data$burst_label),
       scales = "free_x"
     ) +
     ggplot2::geom_hline(yintercept = 0, colour = "black", linetype = "solid") +
