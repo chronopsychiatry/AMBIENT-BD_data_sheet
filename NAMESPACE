@@ -2,6 +2,3 @@
 
 export(clean_data)
 export(ema_colnames)
-export(plot_ema_meters)
-export(plot_method_comparison)
-export(plot_somnofy_sessions)

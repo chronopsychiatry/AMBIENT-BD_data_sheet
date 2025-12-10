@@ -1,4 +1,3 @@
-#' @export
 plot_method_comparison <- function(somnofy, ema, axivity) {
   col_som <- nocturn::get_colnames(somnofy)
   col_ema <- nocturn::get_colnames(ema)
@@ -45,27 +44,7 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
     dplyr::mutate(
       measure = factor(.data$measure, levels = c("sleep_onset", "midsleep", "wakeup"), labels = c("Sleep Onset", "Midsleep", "Wakeup"))
     ) |>
-    dplyr::group_by(.data$burst) |>
-    dplyr::mutate(
-      burst_label = paste0(
-        format(min(.data$night, na.rm = TRUE), "%d-%m-%Y"),
-        " to\n",
-        format(max(.data$night, na.rm = TRUE), "%d-%m-%Y")
-      ),
-      burst_min_night = min(.data$night, na.rm = TRUE)
-    ) |>
-    dplyr::ungroup()
-
-  plot_data <- plot_data |>
-    dplyr::mutate(
-      burst_label = factor(
-        .data$burst_label,
-        levels = plot_data |>
-          dplyr::distinct(.data$burst_label, .data$burst_min_night) |>
-          dplyr::arrange(.data$burst_min_night) |>
-          dplyr::pull(.data$burst_label)
-      )
-    )
+    create_burst_labels(burst_col = "burst", night_col = "night")
 
 
   ggplot2::ggplot(plot_data,
@@ -82,10 +61,10 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
       scales = "free_x"
     ) +
     ggplot2::geom_hline(yintercept = 0, colour = "black", linetype = "solid") +
-    ggplot2::geom_point(size = 3, stroke = 0.8) +
+    ggplot2::geom_point(size = 3, stroke = 0.6) +
     ggplot2::scale_shape_manual(values = c("EMA" = 24, "Axivity" = 21)) +
     ggplot2::scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
-    ggplot2::coord_cartesian(ylim = c(-220, 220)) +
+    # ggplot2::coord_cartesian(ylim = c(-220, 220)) +
     ggplot2::theme_minimal() +
     ggplot2::theme(
       axis.title.y = ggplot2::element_text(size = 14),
@@ -107,6 +86,7 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
 
 }
 
+#' Rename columns to differentiate between methods (somnofy, ema, axivity)
 preprocess_df <- function(df, colnames, method_name) {
   suffix <- tolower(method_name)
   filename_col <- paste0("filename_", suffix)
@@ -128,6 +108,6 @@ preprocess_df <- function(df, colnames, method_name) {
 shortest_time_diff <- function(t1, t2) {
   h1 <- nocturn::time_to_hours(t1)
   h2 <- nocturn::time_to_hours(t2)
-  diff <- h2 - h1
-  pmin(diff, 24 - diff) * 60 # in minutes
+  diff <- abs(h2 - h1)
+  min(diff, 24 - diff) * 60 # in minutes
 }
