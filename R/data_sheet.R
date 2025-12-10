@@ -1,10 +1,12 @@
-data_sheet <- function(output_file, date_range = c(NULL, NULL)) {
-  data <- load_data(date_range = date_range)
-
-  somnofy <- data$somnofy
-  ema <- data$ema
-  axivity <- data$axivity
-
+#' Build an SVG datasheet from somnofy, axivity and EMA data
+#'
+#' @param somnofy Data frame containing Somnofy sleep data
+#' @param axivity Data frame containing Axivity sleep data
+#' @param ema Data frame containing EMA data
+#' @param output_file Path to save the generated datasheet (pdf format)
+#' @return None. The function saves the datasheet SVG file to the specified location.
+#' @export
+build_datasheet <- function(somnofy, axivity, ema, output_file, format = "pdf") {
   col_som <- nocturn::get_colnames(somnofy)
 
   from_date <- min(somnofy[[col_som$night]], na.rm = TRUE)
@@ -20,9 +22,18 @@ data_sheet <- function(output_file, date_range = c(NULL, NULL)) {
   p_comparison <- plot_method_comparison(somnofy, ema, axivity)
   p_mood_board <- plot_ema_mood_board(ema)
 
+  if (format == "svg") {
+    filled_svg <- output_file
+  } else if (format == "pdf") {
+    filled_svg <- tempfile(fileext = ".svg")
+  } else {
+    cli::cli_abort(c("x" = "Unsupported format: {format}",
+                     "i" = "Use 'svg' or 'pdf'"))
+  }
+
   svgedit::draw(
     input_svg = system.file("svg", "Datasheet_template.svg", package = "ambient_data_sheet"),
-    output_svg = output_file,
+    output_svg = filled_svg,
     plots = list(
       Sessions = p_sessions,
       Bubbles = p_bubbles,
@@ -44,4 +55,8 @@ data_sheet <- function(output_file, date_range = c(NULL, NULL)) {
       Axivity_bursts = n_axv_bursts
     )
   )
+
+  if (format == "pdf") {
+    rsvg::rsvg_pdf(filled_svg, output_file)
+  }
 }
