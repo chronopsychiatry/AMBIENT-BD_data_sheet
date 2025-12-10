@@ -57,6 +57,6 @@ build_datasheet <- function(somnofy, axivity, ema, output_file, format = "pdf") 
   )
 
   if (format == "pdf") {
-    rsvg::rsvg_pdf(filled_svg, output_file)
+    rsvg::rsvg_pdf(filled_svg, file = output_file, width = 595, height = 842)
   }
 }
