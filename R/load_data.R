@@ -1,7 +1,7 @@
 load_data <- function(date_range = c(NULL, NULL)) {
-  data_folder <- "/media/Store/Daniel/Ambient-BD/Data/Data_sheet_test_input/18-months_test/"
+  data_folder <- "/media/Store/Daniel/Ambient-BD/Data/Data_sheet_test_input/WP4_ABD001/"
 
-  somnofy_file <- paste0(data_folder, "simulated_sessions_18months.csv")
+  somnofy_file <- paste0(data_folder, "all_sessions_report.csv")
   somnofy <- nocturn::load_sessions(somnofy_file) |>
     clean_data(date_range = date_range)
 
@@ -12,7 +12,7 @@ load_data <- function(date_range = c(NULL, NULL)) {
   ema <- nocturn::clean_sessions(ema) |>
     clean_data(date_range = date_range)
 
-  axivity <- nocturn::load_batch(data_folder, pattern = "GGIR_part4") |>
+  axivity <- nocturn::load_batch(data_folder, pattern = "part4_") |>
     clean_data(date_range = date_range)
 
   list(somnofy = somnofy,

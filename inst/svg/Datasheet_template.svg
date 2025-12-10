@@ -24,11 +24,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4449635"
-     inkscape:cx="250.52536"
-     inkscape:cy="226.64932"
+     inkscape:zoom="2.043487"
+     inkscape:cx="194.27577"
+     inkscape:cy="172.0099"
      inkscape:window-width="1920"
-     inkscape:window-height="1011"
+     inkscape:window-height="1043"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -36,12 +36,12 @@
   <defs
      id="defs2" />
   <rect
-     style="fill:none;stroke:#000000;stroke-width:0.415366"
+     style="fill:none;stroke:#000000;stroke-width:0.407081"
      id="Sessions"
-     width="34.841347"
-     height="245.91853"
-     x="0.92806858"
-     y="47.318657"
+     width="34.849632"
+     height="236.1506"
+     x="0.92392641"
+     y="57.09074"
      inkscape:label="Sessions" />
   <text
      xml:space="preserve"
@@ -206,4 +206,40 @@
      style="fill:none;fill-opacity:0.999976;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
      d="M 41.147632,210.02084 H 205.59228"
      id="path7586-3" />
+  <text
+     xml:space="preserve"
+     style="font-size:3.52778px;line-height:1.5;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:#a020f0;fill-opacity:1;stroke-width:0.3"
+     x="-52.937195"
+     y="20.180086"
+     id="text14733"
+     transform="rotate(-75)"><tspan
+       sodipodi:role="line"
+       id="tspan14731"
+       style="font-size:3.52778px;fill:#a020f0;fill-opacity:1;stroke-width:0.3"
+       x="-52.937195"
+       y="20.180086">Sleep onset</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:3.52778px;line-height:1.5;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:#6495ed;fill-opacity:1;stroke-width:0.3"
+     x="-49.397106"
+     y="33.39188"
+     id="text14733-3"
+     transform="rotate(-75)"><tspan
+       sodipodi:role="line"
+       id="tspan14731-6"
+       style="font-size:3.52778px;fill:#6495ed;fill-opacity:1;stroke-width:0.3"
+       x="-49.397106"
+       y="33.39188">Midsleep</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:3.52778px;line-height:1.5;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif';fill:#ffa500;fill-opacity:1;stroke-width:0.3"
+     x="-45.612366"
+     y="47.51672"
+     id="text14733-7"
+     transform="rotate(-75)"><tspan
+       sodipodi:role="line"
+       id="tspan14731-5"
+       style="font-size:3.52778px;fill:#ffa500;fill-opacity:1;stroke-width:0.3"
+       x="-45.612366"
+       y="47.51672">Wakeup</tspan></text>
 </svg>

@@ -1,4 +1,3 @@
-#' @export
 plot_somnofy_sessions <- function(sessions) {
   col <- nocturn::get_session_colnames(sessions)
 

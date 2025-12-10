@@ -16,7 +16,7 @@ data_sheet <- function(output_file, date_range = c(NULL, NULL)) {
 
   p_sessions <- plot_somnofy_sessions(somnofy)
   p_density <- nocturn::sleeptimes_density(somnofy, circular = TRUE)
-  p_bubbles <- nocturn::plot_sleep_bubbles(somnofy)
+  p_bubbles <- nocturn::plot_sleep_bubbles(somnofy, bubble_size = 3)
   p_comparison <- plot_method_comparison(somnofy, ema, axivity)
   p_mood_board <- plot_ema_mood_board(ema)
 

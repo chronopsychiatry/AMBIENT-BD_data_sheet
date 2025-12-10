@@ -42,8 +42,10 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
     ) |>
     dplyr::filter(!is.na(.data$method) & !is.na(.data$burst)) |>
     dplyr::mutate(
-      measure = factor(.data$measure, levels = c("sleep_onset", "midsleep", "wakeup"), labels = c("Sleep Onset", "Midsleep", "Wakeup"))
+      measure = factor(.data$measure, levels = c("sleep_onset", "midsleep", "wakeup"), labels = c("Sleep Onset", "Midsleep", "Wakeup")),
+      method = factor(.data$method, levels = c("Axivity", "EMA"))
     ) |>
+    dplyr::arrange(method) |>
     create_burst_labels(burst_col = "burst", night_col = "night")
 
 
@@ -61,10 +63,9 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
       scales = "free_x"
     ) +
     ggplot2::geom_hline(yintercept = 0, colour = "black", linetype = "solid") +
-    ggplot2::geom_point(size = 3, stroke = 0.6) +
+    ggplot2::geom_point(size = 2, stroke = 0.6) +
     ggplot2::scale_shape_manual(values = c("EMA" = 24, "Axivity" = 21)) +
     ggplot2::scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
-    # ggplot2::coord_cartesian(ylim = c(-220, 220)) +
     ggplot2::theme_minimal() +
     ggplot2::theme(
       axis.title.y = ggplot2::element_text(size = 14),
@@ -108,6 +109,7 @@ preprocess_df <- function(df, colnames, method_name) {
 shortest_time_diff <- function(t1, t2) {
   h1 <- nocturn::time_to_hours(t1)
   h2 <- nocturn::time_to_hours(t2)
-  diff <- abs(h2 - h1)
-  min(diff, 24 - diff) * 60 # in minutes
+  diff <- (h2 - h1) %% 24
+  diff <- ifelse(diff > 12, diff - 24, diff)
+  diff * 60 # in minutes
 }

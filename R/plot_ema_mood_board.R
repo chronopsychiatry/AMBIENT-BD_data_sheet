@@ -6,39 +6,20 @@ plot_ema_mood_board <- function(ema) {
       burst = as.factor(dplyr::dense_rank(.data$filename))
     ) |>
     dplyr::arrange(.data$burst, .data[[col$night]]) |>
-    dplyr::group_by(.data$burst) |>
-    dplyr::mutate(
-      burst_label = paste0(
-        format(min(.data[[col$night]], na.rm = TRUE), "%d-%m-%Y"),
-        " to\n",
-        format(max(.data[[col$night]], na.rm = TRUE), "%d-%m-%Y")
-      ),
-      burst_min_night = min(.data[[col$night]], na.rm = TRUE)
-    ) |>
-    dplyr::ungroup()
-
-  plot_data <- plot_data |>
-    dplyr::mutate(
-      burst_label = factor(
-        .data$burst_label,
-        levels = plot_data |>
-          dplyr::distinct(.data$burst_label, .data$burst_min_night) |>
-          dplyr::arrange(.data$burst_min_night) |>
-          dplyr::pull(.data$burst_label)
-      )
-    )
+    create_burst_labels(burst_col = "burst", night_col = col$night)
 
   ggplot2::ggplot(plot_data,
     ggplot2::aes(
       x = .data[[col$anxiety_level]],
-      y = .data[[col$mood_level]],
-      color = .data$burst_label
+      y = .data[[col$mood_level]]
     )
   ) +
     ggplot2::facet_grid(
       cols = ggplot2::vars(.data$burst_label)
     ) +
     ggplot2::geom_point(
+      color = "black",
+      alpha = 0.3,
       size = 4,
       show.legend = FALSE
     ) +
