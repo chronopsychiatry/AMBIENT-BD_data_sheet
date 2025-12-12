@@ -6,7 +6,7 @@
 #' @param output_file Path to save the generated datasheet (pdf format)
 #' @return None. The function saves the datasheet SVG file to the specified location.
 #' @export
-build_datasheet <- function(somnofy, axivity, ema, output_file, format = "pdf") {
+build_datasheet <- function(somnofy, axivity, ema, ema_mood, output_file, format = "pdf") {
   col_som <- nocturn::get_colnames(somnofy)
 
   from_date <- min(somnofy[[col_som$night]], na.rm = TRUE)
@@ -20,7 +20,7 @@ build_datasheet <- function(somnofy, axivity, ema, output_file, format = "pdf") 
   p_density <- nocturn::sleeptimes_density(somnofy, circular = TRUE)
   p_bubbles <- nocturn::plot_sleep_bubbles(somnofy, bubble_size = 3)
   p_comparison <- plot_method_comparison(somnofy, ema, axivity)
-  p_mood_board <- plot_ema_mood_board(ema)
+  p_mood_board <- plot_ema_mood_board(ema_mood)
 
   if (format == "svg") {
     filled_svg <- output_file

@@ -13,6 +13,6 @@ build_datasheet(
   somnofy = data$somnofy,
   axivity = data$axivity,
   ema = data$ema,
-  output_file = "~/Downloads/datasheet_test.svg",
-  format = "svg"
+  output_file = "/media/Store/Daniel/Ambient-BD/Data_sheets/datasheet_fake_data_test.pdf",
+  format = "pdf"
 )

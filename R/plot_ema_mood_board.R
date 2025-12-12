@@ -1,21 +1,30 @@
-plot_ema_mood_board <- function(ema) {
-  col <- nocturn::get_colnames(ema)
+plot_ema_mood_board <- function(ema_mood) {
+  col <- nocturn::get_colnames(ema_mood)
 
-  plot_data <- ema |>
+  plot_data <- ema_mood |>
     dplyr::mutate(
-      burst = as.factor(dplyr::dense_rank(.data$filename))
+      burst = as.factor(dplyr::dense_rank(.data$filename)),
+      mood = .data[[col$mood_level]],
+      anxiety = .data[[col$anxiety_level]]
     ) |>
     dplyr::arrange(.data$burst, .data[[col$night]]) |>
-    create_burst_labels(burst_col = "burst", night_col = col$night)
+    create_burst_labels(burst_col = "burst", night_col = col$night) |>
+    tidyr::pivot_longer(
+      cols = tidyselect::all_of(c("mood", "anxiety")),
+      names_to = "measure",
+      values_to = "value"
+    )
 
   ggplot2::ggplot(plot_data,
     ggplot2::aes(
-      x = .data[[col$anxiety_level]],
-      y = .data[[col$mood_level]]
+      x = .data[[col$session_start]],
+      y = .data$value
     )
   ) +
     ggplot2::facet_grid(
-      cols = ggplot2::vars(.data$burst_label)
+      cols = ggplot2::vars(.data$burst_label),
+      rows = ggplot2::vars(.data$measure),
+      scales = "free_y"
     ) +
     ggplot2::geom_point(
       color = "black",
@@ -23,28 +32,31 @@ plot_ema_mood_board <- function(ema) {
       size = 4,
       show.legend = FALSE
     ) +
-    ggplot2::geom_path(
-      ggplot2::aes(
-        group = .data$burst
-      ),
-      show.legend = FALSE
-    ) +
-    ggplot2::scale_x_continuous(limits = c(0, 5)) +
-    ggplot2::scale_y_continuous(limits = c(0, 10)) +
-    ggplot2::labs(
-      x = "Anxiety",
-      y = "Mood",
-      color = NULL
+    # ggplot2::geom_path(
+    #   ggplot2::aes(
+    #     group = .data$burst
+    #   ),
+    #   show.legend = FALSE
+    # ) +
+    ggplot2::scale_y_continuous(
+      limits = function(x) {
+        if (all(plot_data$measure[plot_data$value %in% x] == "anxiety")) {
+          c(0, 5)
+        } else {
+          c(0, 10)
+        }
+      }
     ) +
     ggplot2::theme_minimal() +
     ggplot2::theme(
-      axis.title.x = ggplot2::element_text(size = 16),
-      axis.title.y = ggplot2::element_text(size = 16),
+      axis.title.x = ggplot2::element_blank(),
+      axis.title.y = ggplot2::element_blank(),
+      # axis.ticks.x = ggplot2::element_blank(),
       axis.text.x = ggplot2::element_text(size = 14),
       axis.text.y = ggplot2::element_text(size = 14),
       strip.background = ggplot2::element_blank(),
       strip.text.x = ggplot2::element_text(size = 14),
-      panel.border = ggplot2::element_rect(colour = "black", fill = NA, linewidth = 1),
-      aspect.ratio = 1
+      strip.text.y = ggplot2::element_text(size = 16),
+      panel.border = ggplot2::element_rect(colour = "black", fill = NA, linewidth = 1)
     )
 }

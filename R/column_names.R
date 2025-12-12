@@ -1,4 +1,3 @@
-#' @export
 ema_colnames <- list(
   subject_id = "participant_id",
   session_start = "field_yhnwqo8z38c39jqd",
@@ -14,4 +13,11 @@ ema_colnames <- list(
   sleep_info = "field_ald1uf0d20qi0ivt",
   mood_level = "field_y81izqgynluwadux",
   anxiety_level = "field_e5gnf8ueamdaipze"
+)
+
+ema_mood_colnames <- list(
+  subject_id = "participant_id",
+  session_start = "field_response_time_0",
+  mood_level = "field_hy4taybfpx3yo3c1",
+  anxiety_level = "field_pklmnqdkk6miupdm"
 )

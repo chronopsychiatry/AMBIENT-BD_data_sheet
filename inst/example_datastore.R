@@ -1,6 +1,6 @@
 participant_id <- "ABD001"
 datastore_root <- "/media/Ambient-BD"
-output_file <- paste0("~/Downloads/datasheet_", participant_id, ".pdf")
+output_file <- paste0("/media/Store/Daniel/Ambient-BD/Data_sheets/datasheet_", participant_id, ".pdf")
 
 generate_datasheet(
   datastore_root = datastore_root,

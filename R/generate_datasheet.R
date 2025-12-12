@@ -22,6 +22,7 @@ generate_datasheet <- function(datastore_root, participant_id, output_file, form
     somnofy = data$somnofy,
     axivity = data$axivity,
     ema = data$ema,
+    ema_mood = data$ema_mood,
     output_file = output_file,
     format = format
   )
