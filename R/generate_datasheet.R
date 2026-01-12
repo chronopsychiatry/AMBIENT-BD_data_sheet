@@ -11,6 +11,12 @@ generate_datasheet <- function(datastore_root, participant_id, output_file, form
     participant_id = participant_id
   )
 
+  check_data_paths(
+    somnofy_file = paths$somnofy,
+    ema_folder = paths$ema,
+    axivity_folder = paths$axivity
+  )
+
   data <- load_data(
     somnofy_file = paths$somnofy,
     ema_folder = paths$ema,
