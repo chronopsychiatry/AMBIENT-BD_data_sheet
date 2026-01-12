@@ -1,4 +1,4 @@
-Package: ambient_data_sheet
+Package: AmbientDataSheet
 Title: R script to create a data sheet from different types of input data (Somnofy, Axivity, EMA).
 Version: 0.0.1
 Authors@R: 

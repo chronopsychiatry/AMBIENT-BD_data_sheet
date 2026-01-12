@@ -32,7 +32,7 @@ build_datasheet <- function(somnofy, axivity, ema, ema_mood, output_file, format
   }
 
   svgedit::draw(
-    input_svg = system.file("svg", "Datasheet_template.svg", package = "ambient_data_sheet"),
+    input_svg = system.file("svg", "Datasheet_template.svg", package = "AmbientDataSheet"),
     output_svg = filled_svg,
     plots = list(
       Sessions = p_sessions,

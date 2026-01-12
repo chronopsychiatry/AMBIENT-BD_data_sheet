@@ -4,10 +4,7 @@ plot_method_comparison <- function(somnofy, ema, axivity) {
   col_axv <- nocturn::get_colnames(axivity)
 
   # Fudge filename in Somnofy for now
-  somnofy <- somnofy |>
-    dplyr::mutate(
-      filename = NA_character_
-    )
+  somnofy$filename <- NA_character_
 
   somnofy <- preprocess_df(somnofy, col_som, "Somnofy")
   ema <- preprocess_df(ema, col_ema, "EMA")

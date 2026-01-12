@@ -24,20 +24,14 @@ plot_ema_mood_board <- function(ema_mood) {
     ggplot2::facet_grid(
       cols = ggplot2::vars(.data$burst_label),
       rows = ggplot2::vars(.data$measure),
-      scales = "free_y"
+      scales = "free"
     ) +
     ggplot2::geom_point(
       color = "black",
       alpha = 0.3,
-      size = 4,
+      size = 3,
       show.legend = FALSE
     ) +
-    # ggplot2::geom_path(
-    #   ggplot2::aes(
-    #     group = .data$burst
-    #   ),
-    #   show.legend = FALSE
-    # ) +
     ggplot2::scale_y_continuous(
       limits = function(x) {
         if (all(plot_data$measure[plot_data$value %in% x] == "anxiety")) {
